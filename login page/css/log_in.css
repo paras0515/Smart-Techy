@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+body{
+    background-image: url(../../home.jpg);
+    background-size: cover;
+}
+
+.login-form{
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: black;
+    opacity: 80%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.login-form h1{
+    font-size:40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin:auto;
+    font-family: 'Lora', serif;
+    font-display: inherit;
+}
+.login-form p{
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    margin-left: 15%;
+}
+.login-form input{
+    font-size: 16px;
+    color: black;
+    opacity: 50%;
+    width: auto;
+    margin-left: 15%;
+    padding: 15px 10px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+}
+.login-form button{
+    font-size: 18px;
+    color: black;
+    opacity: 70%;
+    font-weight: bold;
+    margin: 20px 0;
+    margin-left: 15%;
+    padding: 10px 15px;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: 'Lora', serif;
+    
+}
+button:hover{
+    background-color: #555;
+    color: white;
+}
+button:hover:not(.active){
+    background-color: #555;
+    color: #000;
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin-left: 15%;
+    margin-top: -15%;
+    margin-bottom: 10%;
+    font-family: 'Lora' serif;
+    font-size: medium;
+}
+a:hover{
+    color: #3fb1a7;
+}

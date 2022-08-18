@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coming Soon</title>
+        <link rel="stylesheet" href="css/soon.css">
+    </head>
+    <body>
+      <ul>
+        <li class="logo">
+      <div class="logo1">
+        <a href="../home.html"><h1>COMING SOON</h1></a>
+      </div>
+    </li>
+    <li>
+        <div class="container">
+            <h1 id="headline">Countdown to Launch:</h1>
+            <div id="countdown">
+              <ul>
+                <li><span id="days"></span>days</li>
+                <li><span id="hours"></span>Hours</li>
+                <li><span id="minutes"></span>Minutes</li>
+                <li><span id="seconds"></span>Seconds</li>
+              </li>
+            </div>
+            <div class="message">
+              <div id="content">
+                <span class="emoji"><img draggable="false" role="img" class="emoji" alt="🎉" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f389.svg"></span>
+                <span class="emoji"><img draggable="false" role="img" class="emoji" alt="🎉" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f389.svg"></span>
+                <span class="emoji"><img draggable="false" role="img" class="emoji" alt="🎉" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f389.svg"></span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </body>
+    <script>
+        (function () {
+  const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+ 
+  let Launch = "Aug 12, 2022 11:30:00",
+    countDown = new Date(Launch).getTime(),
+    x = setInterval(function () {
+      let now = new Date().getTime(),
+        distance = countDown - now;
+ 
+      (document.getElementById("days").innerText = Math.floor(distance / day)),
+        (document.getElementById("hours").innerText = Math.floor(
+          (distance % day) / hour
+        )),
+        (document.getElementById("minutes").innerText = Math.floor(
+          (distance % hour) / minute
+        )),
+        (document.getElementById("seconds").innerText = Math.floor(
+          (distance % minute) / second
+        ));
+ 
+      //do something later when date is reached
+      if (distance < 0) {
+        let headline = document.getElementById("headline"),
+          countdown = document.getElementById("countdown"),
+          content = document.getElementById("content");
+ 
+        headline.innerText = "It's my birthday!";
+        countdown.style.display = "none";
+        content.style.display = "block";
+ 
+        clearInterval(x);
+      }
+    }, 0);
+})();
+    </script>
+</html>

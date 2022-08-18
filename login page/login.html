@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Login Page </title>
+        <link rel="shortcut icon" href="battery.ico" type="image/x-icon">
+        <div>
+            <link rel="stylesheet" href="css/log_in.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+        </div>
+    </head>
+        <body>
+            <div class="images">
+            </div>
+            <div class="login-form">
+                <h1>Login</h1>
+                <form>
+                    <p> User Name</p>
+                    <input type="email" name="user" placeholder="User Name" required>
+                    <p> Password</p>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button class="active" type="submit" onclick="myFunction()"> Login</button><br>
+                    <a href="#">Forgot Password</a><br>
+                    <a href="../Sign up/signup.html">Create a new account?</a>
+                </form>
+            </div>
+        </body>
+        <script>
+            window.alert("Login Here");
+         function myFunction(){
+                location.replace('../home.html')
+            }
+        </script>
+    </head>
+</html>
